@@ -9,10 +9,6 @@ RoamVerse is a lightweight social media news feed application where users can ex
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Setup Instructions](#setup-instructions)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ---
 

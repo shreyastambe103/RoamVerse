@@ -1,0 +1,222 @@
+/* src/App.css */
+/* Global Styles */
+html {
+  overflow-y: scroll;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background:#000;
+  color: #ffffff;
+}
+
+/* Header NavBar */
+.navbar {
+  position:fixed;
+  top: 0;
+  width: 100%;
+  height: 100px; /* Increased height to accommodate links */
+  background: #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Arrange elements vertically */
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+/* Logo Title */
+.logo {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 10px; /* Space between logo and links */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 50px;
+  padding-top: 20px;
+}
+
+.nav-link {
+  font-size: 18px;
+  text-decoration: none; 
+  color: #ffffff; 
+  transition: color 0.3s ease;
+}
+
+.nav-link.active {
+  color: #fad757; /* Highlight active page */
+}
+
+
+/* Main Content */
+.main-content {
+  margin-top: 100px;
+  padding: 20px;
+  text-align: center;
+  background: url('../bg.png') no-repeat center center; 
+  background-size: cover; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  min-height: 2200px;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fbfbfb;
+}
+
+/* News Feed */
+.news-feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 1200px;
+}
+
+
+
+.post {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced well */
+  padding: 20px;
+  position: relative; /* Needed for positioning the like button */
+  height: 300px; /* Ensures posts have consistent height */
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  transition-duration: 200ms;
+  box-shadow: 0px 0px 15px 5px #fad757;
+}
+
+.post h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.post p {
+  font-size: 16px;
+  color: hsl(300, 1%, 66%);
+  flex-grow: 1; 
+}
+
+/* Like Button Positioning */
+.like-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Heart Icon */
+.heart-icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+/* When the Heart is liked */
+.like-button.liked .heart-icon {
+  fill: #e0384f ; /* Red when filled */
+  stroke: #e0384f ; /* Red border when liked */
+  transform: scale(1.2); /* Slightly enlarge when liked */
+}
+
+/* Share Button */
+.share-button {
+  position: absolute;
+  bottom: 10px;
+  right: 50px; /* Offset to the left of the like button */
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+
+.share-button:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.share-icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: #000;
+  stroke-width: 2;
+  transition: stroke 0.2s ease;
+}
+
+.share-button:hover .share-icon {
+  stroke: #fad757; /* Change color to blue on hover */
+}
+
+/* Scroll Effect */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Search Bar Styles */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  
+}
+
+.search-bar {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 300px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-bar:focus {
+  box-shadow: 0px 0px 12px #fad757;
+}
